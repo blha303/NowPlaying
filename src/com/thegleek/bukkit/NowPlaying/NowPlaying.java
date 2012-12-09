@@ -20,7 +20,6 @@ public class NowPlaying extends JavaPlugin {
 	// public Interpreter beanshell;// TODO: REMOVE BEFORE DISTRIBUTION!
 	private final static String PLUGIN_NAME = "NowPlaying";
 	public static final Logger log = Logger.getLogger("Minecraft");
-	private static final String CODE_NAME = "Electrophile";
 	private String pluginSettingsFile = PLUGIN_NAME + ".settings";
 	private String sPrevDir = PLUGIN_NAME + "/";
 	private File prevdir;
@@ -162,8 +161,7 @@ public class NowPlaying extends JavaPlugin {
 	private String sVersionMessage(String msg) {
 		PluginDescriptionFile pdfFile = this.getDescription();
 
-		sVersion = "[" + pdfFile.getName() + "]: v" + pdfFile.getVersion()
-				+ " (" + CODE_NAME + ")";
+		sVersion = "[" + pdfFile.getName() + "]: v" + pdfFile.getVersion();
 
 		if (!msg.isEmpty()) {
 			sVersion += " " + msg;
