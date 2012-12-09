@@ -53,19 +53,47 @@ public class cPlayerListener implements CommandExecutor {
 			cChat.save(player);
 
 			if (commandName.equals("nphelp")) {
+				if (!player.hasPermission("np.help")) {
+					cChat.send(ChatColor.DARK_RED + "You can't use this command!");
+					return false;
+				}
 				return performNPHelp();
 			} else if (commandName.equals("npver")) {
+				if (!player.hasPermission("np.ver")) {
+					cChat.send(ChatColor.DARK_RED + "You can't use this command!");
+					return false;
+				}
 				cChat.send(ChatColor.GOLD + plugin.getVersion());
 				bRet = true;
 			} else if (commandName.equals("npsize")) {
+				if (!player.hasPermission("np.size")) {
+					cChat.send(ChatColor.DARK_RED + "You can't use this command!");
+					return false;
+				}
 				return performNPSize();
 			} else if (commandName.equals("npadd")) {
+				if (!player.hasPermission("np.add")) {
+					cChat.send(ChatColor.DARK_RED + "You can't use this command!");
+					return false;
+				}
 				return performNPAdd(player, trimmedArgs);
 			} else if (commandName.equals("npdel")) {
+				if (!player.hasPermission("np.del")) {
+					cChat.send(ChatColor.DARK_RED + "You can't use this command!");
+					return false;
+				}
 				return performNPDel(player, trimmedArgs);
 			} else if (commandName.equals("npcheck")) {
+				if (!player.hasPermission("np.check")) {
+					cChat.send(ChatColor.DARK_RED + "You can't use this command!");
+					return false;
+				}
 				return performNPCheck(trimmedArgs);
 			} else if (commandName.equals("npb")) {
+				if (!player.hasPermission("np.b")) {
+					cChat.send(ChatColor.DARK_RED + "You can't use this command!");
+					return false;
+				}
 				if (key == NowPlaying.defaults[0]) {
 					cChat.send(ChatColor.DARK_RED
 							+ "The server admin has not set the APIKEY yet!");
@@ -74,6 +102,10 @@ public class cPlayerListener implements CommandExecutor {
 					return performNP(player, trimmedArgs, key, true);
 				}
 			} else if (commandName.equals("np")) {
+				if (!player.hasPermission("np.use")) {
+					cChat.send(ChatColor.DARK_RED + "You can't use this command!");
+					return false;
+				}
 				if (key == NowPlaying.defaults[0]) {
 					cChat.send(ChatColor.DARK_RED
 							+ "The server admin has not set the APIKEY yet!");

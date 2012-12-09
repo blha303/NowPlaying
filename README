@@ -5,6 +5,7 @@ Version History:
 
 NowPlaying v1.6 - 09/Dec/2012
 [i] Revived by blha303
+[+] Added permissions support. The node for /npver is np.ver, for example. /np is np.use
 [/] Added last.fm bindings to plugin jar, removing that dependency
 
 NowPlaying v1.5 (Electrophile) - 01/Apr/2011
