@@ -1,0 +1,79 @@
+name: NowPlaying
+main: com.thegleek.bukkit.NowPlaying.NowPlaying
+version: 1.6
+website: http://www.thegleek.com/
+author: thegleek
+description: >
+             Hooks the Last.FM API into minecraft by displaying what in-game
+             users are listening to with their mp3 players (winamp, foobar2000, etc...)
+commands:
+  np:
+    description: Shows what you/player is listening to
+    usage: /<command> [player]
+  npb:
+    description: Broadcasts what you/player is listening to
+    usage: /<command> [player]
+  npver:
+    description: Displays the NowPlaying plugin version
+    usage: |
+           /<command>
+           Example: /<command> - displays plugin version
+  npsize:
+    description: Displays how many Alias records exist in the db
+    usage: |
+           /<command> - displays how many aliases exist
+  npadd:
+    description: Adds your lastFM alias to your nick
+    usage: |
+           /<command> [lastFM alias]
+           Example: /<command> deadmau5 - adds lastfm alias 'deadmau5' to your player nick 'thegleek'
+  npdel:
+    description: Deletes your lastFM alias
+    usage: |
+           /<command> - deletes your alias
+  nphelp:
+    description: Displays NowPlaying help
+    usage: |
+           /<command> - shows help on this plugin
+  npcheck:
+    description: Check if entry exists in the db
+    usage: |
+           /<command> [player/alias]
+           Example: /<command> - Lists all db entries in player:alias format - only on the admin console
+           Example: /<command> thegleek - Will show if 'thegleek' exists or not in the db
+permissions:
+  np.*:
+    description: Allows the player to use all NowPlaying commands
+    children:
+      np.help: true
+      np.ver: true
+      np.size: true
+      np.add: true
+      np.del: true
+      np.check: true
+      np.b: true
+      np.use: true
+  np.help:
+    description: Allows the player to use /nphelp
+    default: true
+  np.ver:
+    description: Allows the player to use /npver
+    default: true
+  np.size:
+    description: Allows the player to use /npsize
+    default: false
+  np.add:
+    description: Allows the player to use /npadd
+    default: false
+  np.del:
+    description: Allows the player to use /npdel
+    default: false
+  np.check:
+    description: Allows the player to use /npcheck
+    default: false
+  np.b:
+    description: Allows the player to use /npb
+    default: false
+  np.use:
+    description: Allows the player to use /np
+    default: true
