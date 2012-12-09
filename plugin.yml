@@ -64,10 +64,10 @@ permissions:
     default: false
   np.add:
     description: Allows the player to use /npadd
-    default: false
+    default: true
   np.del:
     description: Allows the player to use /npdel
-    default: false
+    default: true
   np.check:
     description: Allows the player to use /npcheck
     default: false
