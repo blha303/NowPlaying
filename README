@@ -1,9 +1,11 @@
-Direct download: http://dl.dropbox.com/u/6189558/NowPlaying.jar
-
-Support at: http://forums.bukkit.org/threads/nowplaying-last-fm-plugin-within-minecraft-chat.237/
+New plugin page: http://dev.bukkit.org/server-mods/***
 
 Version History:
 [x]Fixed [+]Added [-]Removed [/]Improved/Changed [i]Information
+
+NowPlaying v1.6 - 09/Dec/2012
+[i] Revived by blha303
+[/] Added last.fm bindings to plugin jar, removing that dependency
 
 NowPlaying v1.5 (Electrophile) - 01/Apr/2011
 [/] Improved: Replaced all "windows" \ slashes with "linux" compatible / slashes! Thanks to DZeroX, Drakonas, and BangL for bringing this to my attention!
