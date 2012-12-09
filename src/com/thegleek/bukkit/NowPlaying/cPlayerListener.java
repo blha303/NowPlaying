@@ -284,7 +284,7 @@ public class cPlayerListener implements CommandExecutor {
 
 		try {
 			PaginatedResult<Track> nowPlaying = User.getRecentTracks(user, 1,
-					apiKey, 1);
+					1, apiKey);
 
 			// log.info(nowPlaying.toString());
 

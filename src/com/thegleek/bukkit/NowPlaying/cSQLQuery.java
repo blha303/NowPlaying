@@ -28,5 +28,6 @@ public class cSQLQuery {
 		// Explicit argument indices may be used to re-order output.
 		formatter.format("%4$2s %3$2s %2$2s %1$2s", "a", "b", "c", "d");
 		// -> " d  c  b  a"
+		formatter.close();
 	}
 }

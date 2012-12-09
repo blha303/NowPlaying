@@ -112,7 +112,6 @@ public class cChat {
 		StringBuilder sbRight = new StringBuilder();
 		String[] sSplit;
 		String sTemp = "";
-		int cnt = 0;
 		int tLen = 0;
 		boolean bFlag = true;
 
@@ -121,8 +120,6 @@ public class cChat {
 		for (String s : sSplit) {
 			int i = getStringWidth(s);
 			tLen += i;
-			cnt++;
-
 			if ((tLen < left) && bFlag) {
 				sTemp = sbLeft.toString() + s + " ";
 

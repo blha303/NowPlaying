@@ -47,12 +47,8 @@ public class cPlayerData {
 
 			while (set.next()) {
 				iSize++;
-				int iIndex = set.getInt("id");
 				String name = set.getString("name");
 				String lastfmname = set.getString("lastfmname");
-				iIndex++; // this incrementer doesn't do shit really for our
-							// situation
-
 				ret.put(name, lastfmname);
 			}
 
