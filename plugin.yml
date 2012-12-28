@@ -61,7 +61,7 @@ permissions:
     default: true
   np.size:
     description: Allows the player to use /npsize
-    default: false
+    default: op
   np.add:
     description: Allows the player to use /npadd
     default: true
@@ -70,10 +70,10 @@ permissions:
     default: true
   np.check:
     description: Allows the player to use /npcheck
-    default: false
+    default: op
   np.b:
     description: Allows the player to use /npb
-    default: false
+    default: op
   np.use:
     description: Allows the player to use /np
     default: true
