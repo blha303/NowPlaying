@@ -55,44 +55,51 @@ public class cPlayerListener implements CommandExecutor {
 
 			if (commandName.equals("nphelp")) {
 				if (!player.hasPermission("np.help")) {
-					cChat.send(ChatColor.DARK_RED + "You can't use this command!");
+					cChat.send(ChatColor.DARK_RED
+							+ "You can't use this command!");
 					return true;
 				}
 				return performNPHelp(player);
 			} else if (commandName.equals("npver")) {
 				if (!player.hasPermission("np.ver")) {
-					cChat.send(ChatColor.DARK_RED + "You can't use this command!");
+					cChat.send(ChatColor.DARK_RED
+							+ "You can't use this command!");
 					return true;
 				}
 				cChat.send(ChatColor.GOLD + plugin.getVersion());
 				bRet = true;
 			} else if (commandName.equals("npsize")) {
 				if (!player.hasPermission("np.size")) {
-					cChat.send(ChatColor.DARK_RED + "You can't use this command!");
+					cChat.send(ChatColor.DARK_RED
+							+ "You can't use this command!");
 					return true;
 				}
 				return performNPSize();
 			} else if (commandName.equals("npadd")) {
 				if (!player.hasPermission("np.add")) {
-					cChat.send(ChatColor.DARK_RED + "You can't use this command!");
+					cChat.send(ChatColor.DARK_RED
+							+ "You can't use this command!");
 					return true;
 				}
 				return performNPAdd(player, trimmedArgs);
 			} else if (commandName.equals("npdel")) {
 				if (!player.hasPermission("np.del")) {
-					cChat.send(ChatColor.DARK_RED + "You can't use this command!");
+					cChat.send(ChatColor.DARK_RED
+							+ "You can't use this command!");
 					return true;
 				}
 				return performNPDel(player, trimmedArgs);
 			} else if (commandName.equals("npcheck")) {
 				if (!player.hasPermission("np.check")) {
-					cChat.send(ChatColor.DARK_RED + "You can't use this command!");
+					cChat.send(ChatColor.DARK_RED
+							+ "You can't use this command!");
 					return true;
 				}
 				return performNPCheck(trimmedArgs);
 			} else if (commandName.equals("npb")) {
 				if (!player.hasPermission("np.b")) {
-					cChat.send(ChatColor.DARK_RED + "You can't use this command!");
+					cChat.send(ChatColor.DARK_RED
+							+ "You can't use this command!");
 					return true;
 				}
 				if (key == NowPlaying.defaults[0]) {
@@ -104,7 +111,8 @@ public class cPlayerListener implements CommandExecutor {
 				}
 			} else if (commandName.equals("np")) {
 				if (!player.hasPermission("np.use")) {
-					cChat.send(ChatColor.DARK_RED + "You can't use this command!");
+					cChat.send(ChatColor.DARK_RED
+							+ "You can't use this command!");
 					return true;
 				}
 				if (key == NowPlaying.defaults[0]) {
@@ -191,11 +199,13 @@ public class cPlayerListener implements CommandExecutor {
 			String sFound = findValueInStack(split[0], AliasList.lastfmList);
 
 			if (sFound != null) {
-				cChat.send(ChatColor.translateAlternateColorCodes('&', "&bLastFM alias exists in the db..."));
+				cChat.send(ChatColor.translateAlternateColorCodes('&',
+						"&bLastFM alias exists in the db..."));
 			}
 
 			if (AliasList.lastfmList.containsKey(split[0])) {
-				cChat.send(ChatColor.translateAlternateColorCodes('&', "&bPlayer exists in the db..."));
+				cChat.send(ChatColor.translateAlternateColorCodes('&',
+						"&bPlayer exists in the db..."));
 			}
 		}
 
@@ -208,47 +218,50 @@ public class cPlayerListener implements CommandExecutor {
 	public boolean performNPHelp(Player player) {
 		String sCmd = "";
 		if (player.hasPermission("np.use")) {
-		sCmd = ChatColor.WHITE + "/np (player)" + ChatColor.GOLD + " - "
-				+ ChatColor.YELLOW + "Shows what you/player is listening to";
-		cChat.send(sCmd);
+			sCmd = ChatColor.WHITE + "/np (player)" + ChatColor.GOLD + " - "
+					+ ChatColor.YELLOW
+					+ "Shows what you/player is listening to";
+			cChat.send(sCmd);
 		}
 
 		if (player.hasPermission("np.b")) {
-		sCmd = ChatColor.WHITE + "/npb (player)" + ChatColor.GOLD + " - "
-				+ ChatColor.YELLOW
-				+ "Broadcasts what you/player is listening to";
-		cChat.send(sCmd);
+			sCmd = ChatColor.WHITE + "/npb (player)" + ChatColor.GOLD + " - "
+					+ ChatColor.YELLOW
+					+ "Broadcasts what you/player is listening to";
+			cChat.send(sCmd);
 		}
 
 		if (player.hasPermission("np.help")) {
-		sCmd = ChatColor.WHITE + "/nphelp" + ChatColor.GOLD + " - "
-				+ ChatColor.YELLOW + "Help for the NowPlaying commands";
-		cChat.send(sCmd);
+			sCmd = ChatColor.WHITE + "/nphelp" + ChatColor.GOLD + " - "
+					+ ChatColor.YELLOW + "Help for the NowPlaying commands";
+			cChat.send(sCmd);
 		}
 
 		if (player.hasPermission("np.ver")) {
-		sCmd = ChatColor.WHITE + "/npver" + ChatColor.GOLD + " - "
-				+ ChatColor.YELLOW + "Displays the NowPlaying plugin version";
-		cChat.send(sCmd);
+			sCmd = ChatColor.WHITE + "/npver" + ChatColor.GOLD + " - "
+					+ ChatColor.YELLOW
+					+ "Displays the NowPlaying plugin version";
+			cChat.send(sCmd);
 		}
 
 		if (player.hasPermission("np.add")) {
-		sCmd = ChatColor.WHITE + "/npadd [lastFM name]" + ChatColor.GOLD
-				+ " - " + ChatColor.YELLOW
-				+ "Adds your lastFM alias to your nick";
-		cChat.send(sCmd);
+			sCmd = ChatColor.WHITE + "/npadd [lastFM name]" + ChatColor.GOLD
+					+ " - " + ChatColor.YELLOW
+					+ "Adds your lastFM alias to your nick";
+			cChat.send(sCmd);
 		}
 
 		if (player.hasPermission("np.del")) {
-		sCmd = ChatColor.WHITE + "/npdel" + ChatColor.GOLD + " - "
-				+ ChatColor.YELLOW + "Deletes your lastFM alias";
-		cChat.send(sCmd);
+			sCmd = ChatColor.WHITE + "/npdel" + ChatColor.GOLD + " - "
+					+ ChatColor.YELLOW + "Deletes your lastFM alias";
+			cChat.send(sCmd);
 		}
 
 		if (player.hasPermission("np.check")) {
-		sCmd = ChatColor.WHITE + "/npcheck (player/alias)" + ChatColor.GOLD
-				+ " - " + ChatColor.YELLOW + "Check if entry exists in the db";
-		cChat.send(sCmd);
+			sCmd = ChatColor.WHITE + "/npcheck (player/alias)" + ChatColor.GOLD
+					+ " - " + ChatColor.YELLOW
+					+ "Check if entry exists in the db";
+			cChat.send(sCmd);
 		}
 
 		return true;
@@ -348,26 +361,44 @@ public class cPlayerListener implements CommandExecutor {
 				Date tracklastPlayed = track.getPlayedWhen();
 
 				if (bNowPlaying) {
-					currentInfo = ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("nowplayingmsg").replaceAll("%name%", sDisplayName));
-
-					preOutput = trackName + " - " + trackArtist;
+					currentInfo = ChatColor.translateAlternateColorCodes('&',
+							plugin.getConfig().getString("nowplayingmsg")
+									.replaceAll("%name%", sDisplayName));
 
 					if (!trackAlbum.isEmpty()) {
-						preOutput += " (" + trackAlbum + ") ";
+						preOutput = trackName + " - " + trackArtist + " ("
+								+ trackAlbum + ") ";
 					}
 
-					aOutput = ParseString(currentInfo, preOutput,
-							ChatColor.BLUE);
+					aOutput = ParseString(
+							currentInfo,
+							preOutput,
+							ChatColor.getByChar(plugin.getConfig().getString(
+									"trackinfocolor")));
 				} else {
-					currentInfo = ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("lastplayedmsg").replaceAll("%name%", sDisplayName));
-
-					preOutput = trackName + " - " + trackArtist;
+					currentInfo = ChatColor.translateAlternateColorCodes('&',
+							plugin.getConfig().getString("lastplayedmsg")
+									.replaceAll("%name%", sDisplayName));
 
 					if (!trackAlbum.isEmpty()) {
-						preOutput += " (" + trackAlbum + ") ";
+						preOutput = ChatColor.translateAlternateColorCodes('&',
+								plugin.getConfig().getString("infoformatalbum")
+										.replaceAll("%track%", trackName)
+										.replaceAll("%artist%", trackArtist)
+										.replaceAll("%album%", trackAlbum));
+					} else {
+						preOutput = ChatColor.translateAlternateColorCodes(
+								'&', plugin.getConfig()
+										.getString("infoformatNoAlbum")
+										.replaceAll("%track%", trackName)
+										.replaceAll("%artist%", trackArtist));
 					}
 
-					aOutput = ParseString(currentInfo, preOutput, ChatColor.getByChar(plugin.getConfig().getString("trackinfocolor")));
+					aOutput = ParseString(
+							currentInfo,
+							preOutput,
+							ChatColor.getByChar(plugin.getConfig().getString(
+									"trackinfocolor")));
 				}
 
 				if (!bNowPlaying) {

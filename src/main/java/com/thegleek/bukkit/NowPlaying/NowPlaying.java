@@ -103,6 +103,8 @@ public class NowPlaying extends JavaPlugin {
 		getConfig().addDefault("nowplayingmsg", "%name% &1is currently listening to: ");
 		getConfig().addDefault("lastplayedmsg", "%name% &8last played: ");
 		getConfig().addDefault("trackinfocolor", "8");
+		getConfig().addDefault("infoformatalbum", "%artist% - %track% (from %album%)");
+		getConfig().addDefault("infoformatNoAlbum", "%artist% - %track%");
 		getConfig().options().copyDefaults(true);
 		saveConfig();
 
